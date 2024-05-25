@@ -1,0 +1,254 @@
+[
+  {
+    "content": "Exploring the mountains is an incredible experience!",
+    "tags": ["travel", "adventure"],
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg",
+    "authorId": "budi_prasetyo",
+    "comments": [
+      {
+        "content": "Absolutely breathtaking!",
+        "username": "siti_nurhaliza",
+        "createdAt": "2024-05-01T10:00:00Z",
+        "updatedAt": "2024-05-01T10:00:00Z"
+      },
+      {
+        "content": "I wish I was there!",
+        "username": "agus_susanto",
+        "createdAt": "2024-05-02T11:30:00Z",
+        "updatedAt": "2024-05-02T11:30:00Z"
+      }
+    ],
+    "likes": [
+      {
+        "username": "dewi_lestari",
+        "createdAt": "2024-05-01T12:00:00Z",
+        "updatedAt": "2024-05-01T12:00:00Z"
+      },
+      {
+        "username": "hendro_wijaya",
+        "createdAt": "2024-05-02T13:15:00Z",
+        "updatedAt": "2024-05-02T13:15:00Z"
+      }
+    ],
+    "createdAt": "2024-05-01T09:00:00Z",
+    "updatedAt": "2024-05-01T09:00:00Z"
+  },
+  {
+    "content": "Just baked some delicious cookies!",
+    "tags": ["food", "baking"],
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Chocolate_Chip_Cookies_-_kimberlykv.jpg",
+    "authorId": "yuli_rahmawati",
+    "comments": [
+      {
+        "content": "Yummy! Can I have the recipe?",
+        "username": "wawan_setiawan",
+        "createdAt": "2024-05-03T08:00:00Z",
+        "updatedAt": "2024-05-03T08:00:00Z"
+      }
+    ],
+    "likes": [
+      {
+        "username": "dian_sastro",
+        "createdAt": "2024-05-03T09:00:00Z",
+        "updatedAt": "2024-05-03T09:00:00Z"
+      },
+      {
+        "username": "eka_novita",
+        "createdAt": "2024-05-03T10:00:00Z",
+        "updatedAt": "2024-05-03T10:00:00Z"
+      }
+    ],
+    "createdAt": "2024-05-03T07:00:00Z",
+    "updatedAt": "2024-05-03T07:00:00Z"
+  },
+  {
+    "content": "Had a great time at the concert last night!",
+    "tags": ["music", "concert"],
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Green_Day_-_Rock_am_Ring_2013_-_02.jpg",
+    "authorId": "andi_bachtiar",
+    "comments": [
+      {
+        "content": "It was amazing!",
+        "username": "mira_juliani",
+        "createdAt": "2024-05-04T06:00:00Z",
+        "updatedAt": "2024-05-04T06:00:00Z"
+      },
+      {
+        "content": "Best concert ever!",
+        "username": "rudi_haryanto",
+        "createdAt": "2024-05-04T07:00:00Z",
+        "updatedAt": "2024-05-04T07:00:00Z"
+      }
+    ],
+    "likes": [
+      {
+        "username": "sari_putri",
+        "createdAt": "2024-05-04T08:00:00Z",
+        "updatedAt": "2024-05-04T08:00:00Z"
+      }
+    ],
+    "createdAt": "2024-05-04T05:00:00Z",
+    "updatedAt": "2024-05-04T05:00:00Z"
+  },
+  {
+    "content": "Started learning how to play the guitar!",
+    "tags": ["music", "learning"],
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Man_playing_guitar.jpg",
+    "authorId": "dimas_arief",
+    "comments": [
+      {
+        "content": "That's awesome! Keep it up!",
+        "username": "ratna_mulyani",
+        "createdAt": "2024-05-05T14:00:00Z",
+        "updatedAt": "2024-05-05T14:00:00Z"
+      }
+    ],
+    "likes": [
+      {
+        "username": "lina_widodo",
+        "createdAt": "2024-05-05T15:00:00Z",
+        "updatedAt": "2024-05-05T15:00:00Z"
+      }
+    ],
+    "createdAt": "2024-05-05T13:00:00Z",
+    "updatedAt": "2024-05-05T13:00:00Z"
+  },
+  {
+    "content": "Weekend getaway to the beach!",
+    "tags": ["travel", "beach"],
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Cabo_San_Lucas_Beach.jpg",
+    "authorId": "tina_kartika",
+    "comments": [
+      {
+        "content": "Looks so relaxing!",
+        "username": "roby_hidayat",
+        "createdAt": "2024-05-06T10:00:00Z",
+        "updatedAt": "2024-05-06T10:00:00Z"
+      }
+    ],
+    "likes": [
+      {
+        "username": "yusuf_purnomo",
+        "createdAt": "2024-05-06T11:00:00Z",
+        "updatedAt": "2024-05-06T11:00:00Z"
+      }
+    ],
+    "createdAt": "2024-05-06T09:00:00Z",
+    "updatedAt": "2024-05-06T09:00:00Z"
+  },
+  {
+    "content": "New blog post: 10 Tips for Healthy Living",
+    "tags": ["health", "blog"],
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Healthy_Food.jpg",
+    "authorId": "eko_surya",
+    "comments": [
+      {
+        "content": "Great tips, thanks for sharing!",
+        "username": "lilis_hartini",
+        "createdAt": "2024-05-07T09:00:00Z",
+        "updatedAt": "2024-05-07T09:00:00Z"
+      }
+    ],
+    "likes": [
+      {
+        "username": "andi_setiadi",
+        "createdAt": "2024-05-07T10:00:00Z",
+        "updatedAt": "2024-05-07T10:00:00Z"
+      }
+    ],
+    "createdAt": "2024-05-07T08:00:00Z",
+    "updatedAt": "2024-05-07T08:00:00Z"
+  },
+  {
+    "content": "Just finished reading an amazing book!",
+    "tags": ["books", "reading"],
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/Reading_a_book.jpg",
+    "authorId": "putri_rizky",
+    "comments": [
+      {
+        "content": "Which book was it?",
+        "username": "tono_mulyono",
+        "createdAt": "2024-05-08T12:00:00Z",
+        "updatedAt": "2024-05-08T12:00:00Z"
+      }
+    ],
+    "likes": [
+      {
+        "username": "sari_dewi",
+        "createdAt": "2024-05-08T13:00:00Z",
+        "updatedAt": "2024-05-08T13:00:00Z"
+      }
+    ],
+    "createdAt": "2024-05-08T11:00:00Z",
+    "updatedAt": "2024-05-08T11:00:00Z"
+  },
+  {
+    "content": "Cycling through the countryside",
+    "tags": ["fitness", "cycling"],
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Cycling.jpg",
+    "authorId": "fahmi_alam",
+    "comments": [
+      {
+        "content": "What a beautiful route!",
+        "username": "irma_andriani",
+        "createdAt": "2024-05-09T10:00:00Z",
+        "updatedAt": "2024-05-09T10:00:00Z"
+      }
+    ],
+    "likes": [
+      {
+        "username": "lina_puspita",
+        "createdAt": "2024-05-09T11:00:00Z",
+        "updatedAt": "2024-05-09T11:00:00Z"
+      }
+    ],
+    "createdAt": "2024-05-09T09:00:00Z",
+    "updatedAt": "2024-05-09T09:00:00Z"
+  },
+  {
+    "content": "Homemade pasta night!",
+    "tags": ["food", "cooking"],
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Home_Made_Pasta.jpg",
+    "authorId": "ratna_anggraini",
+    "comments": [
+      {
+        "content": "Looks delicious!",
+        "username": "tono_prasetya",
+        "createdAt": "2024-05-10T20:00:00Z",
+        "updatedAt": "2024-05-10T20:00:00Z"
+      }
+    ],
+    "likes": [
+      {
+        "username": "yulia_saputra",
+        "createdAt": "2024-05-10T21:00:00Z",
+        "updatedAt": "2024-05-10T21:00:00Z"
+      }
+    ],
+    "createdAt": "2024-05-10T19:00:00Z",
+    "updatedAt": "2024-05-10T19:00:00Z"
+  },
+  {
+    "content": "Yoga session at sunrise",
+    "tags": ["fitness", "yoga"],
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Tree_Pose_Yoga_Amelia_Island.jpg",
+    "authorId": "rina_syafitri",
+    "comments": [
+      {
+        "content": "So peaceful!",
+        "username": "agus_saputra",
+        "createdAt": "2024-05-11T06:00:00Z",
+        "updatedAt": "2024-05-11T06:00:00Z"
+      }
+    ],
+    "likes": [
+      {
+        "username": "putri_kurnia",
+        "createdAt": "2024-05-11T07:00:00Z",
+        "updatedAt": "2024-05-11T07:00:00Z"
+      }
+    ],
+    "createdAt": "2024-05-11T05:00:00Z",
+    "updatedAt": "2024-05-11T05:00:00Z"
+  }
+]
