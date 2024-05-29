@@ -17,7 +17,6 @@ const typeDefs = `#graphql
     content: String
     tags: [String]
     imgUrl: String
-    authorId: String
     comments: [Comment]
     likes: [Like]
     createdAt: String

@@ -12,9 +12,9 @@ const resolvers = {
 
       const cache = await redis.get(RK.GET_POSTS());
 
-      if (cache) {
-        return JSON.parse(cache);
-      }
+      // if (cache) {
+      //   return JSON.parse(cache);
+      // }
 
       const data = await Post.findAllSortedWithAuthor();
 
@@ -40,8 +40,10 @@ const resolvers = {
         authorId: user._id,
       });
 
-      result.value.createdAt = new Date().toISOString();
-      result.value.updatedAt = new Date().toISOString();
+      result.value.createdAt = new Date();
+      result.value.updatedAt = new Date();
+      result.value.likes = [];
+      result.value.comments = [];
 
       const data = await Post.insertOne(result.value);
       const post = await Post.findById(data.insertedId);
@@ -53,8 +55,8 @@ const resolvers = {
         data: post,
       };
     },
-    createComment: async (_, args) => {
-      await contextValue.authentication();
+    createComment: async (_, args, contextValue) => {
+      const user = await contextValue.authentication();
 
       const result = Joi.object({
         postId: Joi.string().required(),
@@ -75,7 +77,7 @@ const resolvers = {
 
       post.comments.push({
         content: result.value.content,
-        username: contextValue.authentication.username,
+        username: user.username,
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       });
@@ -87,7 +89,7 @@ const resolvers = {
         data: post,
       };
     },
-    likePost: async (_, args) => {
+    likePost: async (_, args, contextValue) => {
       const user = await contextValue.authentication();
 
       const result = Joi.object({

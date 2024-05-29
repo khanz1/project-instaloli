@@ -11,8 +11,9 @@ const resolvers = {
       return await User.search(q);
     },
     getUserById: async (_, { _id }, context) => {
+      console.log("asdf");
       await context.authentication();
-      return await User.findByIdWithFollowersAndFollowing(_id);
+      return await User.findProfileById(_id);
     },
   },
   Mutation: {
@@ -77,7 +78,16 @@ const resolvers = {
       }
 
       const token = signToken({ userId: user._id });
-      return { access_token: token, message: "Login success" };
+      return {
+        access_token: token,
+        message: "Login success",
+        user: {
+          _id: user._id,
+          name: user.name,
+          username: user.username,
+          email: user.email,
+        },
+      };
     },
   },
 };

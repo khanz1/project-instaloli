@@ -56,6 +56,84 @@ class User {
       .toArray();
   }
 
+  async findProfileById(id) {
+    let _id = id;
+    if (!(id instanceof ObjectId)) {
+      _id = ObjectId.createFromHexString(id);
+    }
+    const [profile] = await this.collection
+      .aggregate([
+        {
+          $match: {
+            _id,
+          },
+        },
+        {
+          $lookup: {
+            from: "follows",
+            localField: "_id",
+            foreignField: "followingId",
+            as: "followers",
+            pipeline: [
+              {
+                $lookup: {
+                  from: "users",
+                  localField: "followerId",
+                  foreignField: "_id",
+                  as: "user",
+                },
+              },
+              {
+                $unwind: "$user",
+              },
+              {
+                $project: {
+                  "user.password": 0,
+                },
+              },
+            ],
+          },
+        },
+        {
+          $lookup: {
+            from: "follows",
+            localField: "_id",
+            foreignField: "followerId",
+            as: "followings",
+            pipeline: [
+              {
+                $lookup: {
+                  from: "users",
+                  localField: "followingId",
+                  foreignField: "_id",
+                  as: "user",
+                },
+              },
+              {
+                $unwind: "$user",
+              },
+              {
+                $project: {
+                  "user.password": 0,
+                },
+              },
+            ],
+          },
+        },
+        {
+          $lookup: {
+            from: "posts",
+            localField: "_id",
+            foreignField: "authorId",
+            as: "posts",
+          },
+        },
+      ])
+      .toArray();
+
+    return profile;
+  }
+
   async findByIdWithFollowersAndFollowing(id) {
     let _id = id;
     if (!(id instanceof ObjectId)) {
@@ -172,6 +250,60 @@ class User {
                 },
               },
             ],
+          },
+        },
+        {
+          $lookup: {
+            from: "follows",
+            localField: "_id",
+            foreignField: "followerId",
+            as: "followingInfo",
+          },
+        },
+        {
+          $lookup: {
+            from: "follows",
+            localField: "_id",
+            foreignField: "followingId",
+            as: "followerInfo",
+          },
+        },
+        {
+          $addFields: {
+            isFollower: {
+              $cond: {
+                if: {
+                  $gt: [
+                    {
+                      $size: "$followerInfo",
+                    },
+                    0,
+                  ],
+                },
+                then: true,
+                else: false,
+              },
+            },
+            isFollowing: {
+              $cond: {
+                if: {
+                  $gt: [
+                    {
+                      $size: "$followingInfo",
+                    },
+                    0,
+                  ],
+                },
+                then: true,
+                else: false,
+              },
+            },
+          },
+        },
+        {
+          $project: {
+            followerInfo: 0,
+            followingInfo: 0,
           },
         },
       ])

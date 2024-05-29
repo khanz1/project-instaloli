@@ -21,6 +21,7 @@ const typeDefs = `#graphql
   type ResponseLogin {
     access_token: String!
     message: String!
+    user: UserWithoutPassword
   }
 
   type UserWithFollowers {
@@ -32,6 +33,43 @@ const typeDefs = `#graphql
     followings: [Follower]
   }
 
+
+  type Comment {
+    content: String
+    username: String
+    createdAt: String
+    updatedAt: String
+  }
+
+  type Like {
+    username: String
+    createdAt: String
+    updatedAt: String
+  }
+
+  type Post {
+    _id: ID
+    content: String
+    tags: [String]
+    imgUrl: String
+    authorId: String
+    comments: [Comment]
+    likes: [Like]
+    createdAt: String
+    updatedAt: String
+    author: UserWithoutPassword
+  }
+
+  type UserProfile {
+    _id: ID
+    name: String
+    username: String
+    email: String
+    followers: [Follower]
+    followings: [Follower]
+    posts: [Post]
+  }
+
   type Follower {
     _id: ID
     followerId: String
@@ -40,14 +78,23 @@ const typeDefs = `#graphql
     updatedAt: String
     user: UserWithoutPassword
   }
+
+  type UserWithStatistics {
+    _id: ID
+    name: String
+    username: String
+    email: String
+    isFollowing: Boolean
+    isFollower: Boolean
+  }
   
   type Query {
-    getUserById(_id: String!): [UserWithFollowers]
-    searchUser(q: String!): [UserWithoutPassword]
+    getUserById(_id: String!): UserProfile
+    searchUser(q: String!): [UserWithStatistics]
   }
 
   type Mutation {
-    register(username: String!, email: String!, password: String!): UserWithoutPassword
+    register(name: String!, username: String!, email: String!, password: String!): UserWithoutPassword
     login(username: String!, password: String!): ResponseLogin
   }
 `;
