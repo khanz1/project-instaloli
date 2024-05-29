@@ -20,7 +20,7 @@ module.exports = {
     },
   }),
   serverOptions: {
-    listen: { port: 4000 },
+    listen: { port: process.env.PORT || 3001 },
     context: ({ req }) => ({
       authentication: authentication.bind(null, req),
     }),

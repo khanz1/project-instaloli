@@ -30,6 +30,8 @@ export default function LoginScreen() {
     }
   };
 
+  console.log(error, '>>>ads')
+
   if (loading) return <Text>Submitting...</Text>;
   if (error) return <Text>Submission error! ${error.message}`</Text>;
 
